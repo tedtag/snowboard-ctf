@@ -32,9 +32,8 @@
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $sql="INSERT INTO models (year, name, type)
-            VALUES
-            ($_POST[year],$_POST[name],$_POST[type])";
+            $sql="INSERT INTO `models` (`id`, `name`, `type`, `year`) 
+            VALUES (NULL, $_POST[year],$_POST[name],$_POST[type])";
 
             if(mysqli_query($conn, $sql)){
                 echo "Records inserted successfully.";
