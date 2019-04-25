@@ -47,6 +47,12 @@
       </section>
 
       <?php endif ?>
+
+      <section id="other-models">
+        <a href="./other-models.php?type=d.lee">
+          View Our Other Models
+        </a>
+      </section>
     </main>
 
     <?php
