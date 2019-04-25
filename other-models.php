@@ -50,7 +50,7 @@
         $conn->close();
         ?>
 
-        <form action="/other-models.php" method="post" class="form-group">
+        <form action="" method="post" class="form-group">
           <div style="background-color: rgba(0,0,0,50)">Are we missing a d.lee snowboard model? Add it to our database!</div>
           <table class='table table-striped table-dark'>
             <tr>
@@ -63,7 +63,7 @@
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
-              <td><input class="form-control" type="submit" value="Add Model"></td>
+              <td><input class="btn btn-outline-secondary" type="submit" value="Add Model"></td>
             </tr>
           </table>
         </form>
