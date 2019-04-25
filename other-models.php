@@ -31,7 +31,7 @@
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "SELECT year, name, type FROM `models` WHERE name = `" . $_GET['name'] . "`";
+        $sql = "SELECT year, name, type FROM models WHERE name = '" . $_GET['name'] . "'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -41,6 +41,7 @@
             }
         } else {
             echo "0 results";
+            echo $sql;
         }
         $conn->close();
         ?>
