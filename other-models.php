@@ -37,6 +37,12 @@
             ('','$_POST[year]',$_POST[name],$_POST[type])";
             echo "Snowboard Successfully Added!";
 
+            if(mysqli_query($conn, $sql)){
+                echo "Records inserted successfully.";
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+            }
+            
         }
 
         $sql = "SELECT year, name, type FROM models WHERE name = '" . $_GET['name'] . "'";
