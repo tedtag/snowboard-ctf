@@ -36,12 +36,12 @@
 
         if ($result->num_rows > 0) {
             // output data of each row
-            echo "<table>"
-                echo "<tr><th>Year</th><th>Name</th><th>Type</th></tr>"
+            echo "<table>";
+            echo "<tr><th>Year</th><th>Name</th><th>Type</th></tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr><td>" . $row["year"]. "</td><td>" . $row["name"]. "</td><td>" . $row["type"]. "</tr>";
             }
-            echo "</table>"
+            echo "</table>";
         } else {
             echo "0 results";
         }
