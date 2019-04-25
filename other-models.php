@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-
   <!-- Head -->
   <?php include 'head.php';?>
 
@@ -30,6 +29,15 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         } 
+
+        if (isset($_POST['submit'])) {
+
+            $sql="INSERT INTO models (id, year, name, type)
+            VALUES
+            ('','$_POST[year]',$_POST[name],$_POST[type])";
+            echo "Snowboard Successfully Added!";
+
+        }
 
         $sql = "SELECT year, name, type FROM models WHERE name = '" . $_GET['name'] . "'";
         $result = $conn->query($sql);
@@ -63,7 +71,7 @@
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
-              <td><input class="btn btn-outline-primary" type="submit" value="Add Model"></td>
+              <td><input class="btn btn-primary" type="submit" value="Add Model"></td>
             </tr>
           </table>
         </form>
