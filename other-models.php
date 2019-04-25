@@ -36,14 +36,17 @@
 
         if ($result->num_rows > 0) {
             // output data of each row
+            echo "<table>"
+                echo "<tr><th>Year</th><th>Name</th><th>Type</th></tr>"
             while($row = $result->fetch_assoc()) {
-                echo "year: " . $row["year"]. " - Name: " . $row["name"]. " - Type: " . $row["type"]. "<br>";
+                echo "<tr><td>" . $row["year"]. "</td><td>" . $row["name"]. "</td><td>" . $row["type"]. "</tr>";
             }
+            echo "</table>"
         } else {
             echo "0 results";
-            if (isset($_GET['debug']) && $_GET['debug'] == 'true')
-                echo "<br><b>Query:</b> " . $sql;
         }
+        if (isset($_GET['debug']) && $_GET['debug'] == 'true')
+            echo "<br><b>Query:</b> " . $sql;
         $conn->close();
         ?>
       </section>
