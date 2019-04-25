@@ -36,7 +36,7 @@
 
         if ($result->num_rows > 0) {
             // output data of each row
-            echo "<table class='table table-striped  table-dark'>";
+            echo "<table class='table table-striped table-dark'>";
             echo "<thead><tr><th scope='col'>Year</th><th scope='col'>Name</th><th scope='col'>Type</th></tr></thead><tbody>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr><td>" . $row["year"]. "</td><td>" . $row["name"]. "</td><td>" . $row["type"]. "</tr>";
@@ -49,6 +49,24 @@
             echo "<br><b>Query:</b> " . $sql;
         $conn->close();
         ?>
+
+        <form action="/other-models.php" method="post">
+          <div>Are we missing a d.lee snowboard model? Add it to our database!</div>
+          <table class='table table-striped table-dark'>
+              <td><input type="text" name="year" placeholder="Snowboard year"></td>
+              <td><input type="text" name="name" value="d.lee" disabled></td>
+              <td>
+                <select name="type">
+                  <option value="Rocker" selected="selected">Rocker</option>
+                  <option value="Camber">Camber</option>
+                  <option value="Hybrid">Hybrid</option>
+                </select> 
+              </td>
+          </table>
+          <div>
+            <input type="submit" value="Add Model">
+          </div>
+        </form>
       </section>
 
     </main>
