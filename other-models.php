@@ -34,7 +34,7 @@
 
             $sql="INSERT INTO models (year, name, type)
             VALUES
-            ($_POST[year]',$_POST[name],$_POST[type])";
+            ($_POST[year],$_POST[name],$_POST[type])";
 
             if(mysqli_query($conn, $sql)){
                 echo "Records inserted successfully.";
