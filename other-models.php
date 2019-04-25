@@ -63,7 +63,7 @@
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
-              <td><input class="btn btn-outline-secondary" type="submit" value="Add Model"></td>
+              <td><input class="btn btn-outline-primary" type="submit" value="Add Model"></td>
             </tr>
           </table>
         </form>
