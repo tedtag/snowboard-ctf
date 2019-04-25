@@ -70,6 +70,7 @@
     }
 
     footer {
+      margin-top: 100px;
       width: 100%;
       background-color: rgba(0,0,0,.7);
     }
