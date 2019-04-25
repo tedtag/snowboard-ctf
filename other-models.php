@@ -20,7 +20,7 @@
       <section id="listing">
         <?php
         $servername = "localhost:3306";
-        $username = "backup";
+        $username = "root_user";
         $password = "1qazxsw2!QAZXSW@";
         $dbname = "snowboard-ctf";
 
@@ -31,7 +31,7 @@
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "SELECT year, name, type FROM models WHERE name = " . $_GET['name'];
+        $sql = "SELECT year, name, type FROM `models` WHERE name = `" . $_GET['name'] . "`";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
