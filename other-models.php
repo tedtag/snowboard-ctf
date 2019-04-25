@@ -20,7 +20,7 @@
       <section id="listing">
         <?php
         $servername = "localhost:3306";
-        $username = "root";
+        $username = "backup";
         $password = "1qazxsw2!QAZXSW@";
         $dbname = "snowboard-ctf";
 
