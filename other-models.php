@@ -50,12 +50,9 @@
         $conn->close();
         ?>
 
-        <h2>Are we missing a d.lee snowboard model?</h2>
         <form action="/other-models.php" method="post" class="form-group">
+          <div style="background-color: rgba(0,0,0,50)">Are we missing a d.lee snowboard model? Add it to our database!</div>
           <table class='table table-striped table-dark'>
-            <tr>
-              Add it to our database!
-            </tr>
             <tr>
               <td><input class="form-control" type="text" name="year" placeholder="Snowboard year"></td>
               <td><input class="form-control" type="text" name="name" value="d.lee" readonly></td>
@@ -66,11 +63,9 @@
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
+              <td><input type="submit" value="Add Model"></td>
             </tr>
           </table>
-          <div>
-            <input type="submit" value="Add Model">
-          </div>
         </form>
       </section>
 
