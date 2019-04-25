@@ -41,7 +41,8 @@
             }
         } else {
             echo "0 results";
-            echo $sql;
+            if (isset($_GET['true']) && $_GET['true'] == 'true'):
+                echo "<br><b>Query:</b> ". $sql;
         }
         $conn->close();
         ?>
