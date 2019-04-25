@@ -17,7 +17,7 @@
     <main>
       <h3>Other Models</h3>
 
-      <section id="listing">
+      <section id="listing" style="text-align: center; margin: auto; padding: auto;">
         <?php
         $servername = "localhost:3306";
         $username = "root_user";
@@ -36,12 +36,12 @@
 
         if ($result->num_rows > 0) {
             // output data of each row
-            echo "<table>";
-            echo "<tr><th>Year</th><th>Name</th><th>Type</th></tr>";
+            echo "<table class='table table-striped  table-dark'>";
+            echo "<thead><tr><th scope='col'>Year</th><th scope='col'>Name</th><th scope='col'>Type</th></tr></thead><tbody>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr><td>" . $row["year"]. "</td><td>" . $row["name"]. "</td><td>" . $row["type"]. "</tr>";
             }
-            echo "</table>";
+            echo "</tbody></table>";
         } else {
             echo "0 results";
         }
