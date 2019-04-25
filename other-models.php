@@ -50,18 +50,23 @@
         $conn->close();
         ?>
 
-        <form action="/other-models.php" method="post">
-          <div>Are we missing a d.lee snowboard model? Add it to our database!</div>
+        <h2>Are we missing a d.lee snowboard model?</h2>
+        <form action="/other-models.php" method="post" class="form-group">
           <table class='table table-striped table-dark'>
-              <td><input type="text" name="year" placeholder="Snowboard year"></td>
-              <td><input type="text" name="name" value="d.lee" disabled></td>
+            <tr>
+              Add it to our database!
+            </tr>
+            <tr>
+              <td><input class="form-control" type="text" name="year" placeholder="Snowboard year"></td>
+              <td><input class="form-control" type="text" name="name" value="d.lee" readonly></td>
               <td>
-                <select name="type">
+                <select class="form-control" name="type">
                   <option value="Rocker" selected="selected">Rocker</option>
                   <option value="Camber">Camber</option>
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
+            </tr>
           </table>
           <div>
             <input type="submit" value="Add Model">
