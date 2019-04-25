@@ -49,7 +49,7 @@
       <?php endif ?>
 
       <section id="other-models">
-        <a href="./other-models.php?name=d.lee">
+        <a href="./other-models.php?name=d.lee" class="btn btn-primary btn-sm">
           View Our Other Models
         </a>
       </section>
