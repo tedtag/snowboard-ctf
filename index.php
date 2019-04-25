@@ -48,7 +48,7 @@
 
       <?php endif ?>
 
-      <section id="other-models">
+      <section id="other-models" style="margin-top: 100px;">
         <a href="./other-models.php?name=d.lee" class="btn btn-dark btn-sm">
           View Our Other Models
         </a>
