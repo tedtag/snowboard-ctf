@@ -30,7 +30,7 @@
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        if (isset($_POST['submit'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $sql="INSERT INTO models (id, year, name, type)
             VALUES
