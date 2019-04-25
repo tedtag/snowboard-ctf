@@ -37,12 +37,12 @@
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo "year: " . $row["year"]. " - Name: " . $row["name"]." - Type: " . $row["type"]. "<br>";
+                echo "year: " . $row["year"]. " - Name: " . $row["name"]. " - Type: " . $row["type"]. "<br>";
             }
         } else {
             echo "0 results";
-            if (isset($_GET['true']) && $_GET['true'] == 'true'):
-                echo "<br><b>Query:</b> ". $sql;
+            if (isset($_GET['debug']) && $_GET['debug'] == 'true')
+                echo "<br><b>Query:</b> " . $sql;
         }
         $conn->close();
         ?>
