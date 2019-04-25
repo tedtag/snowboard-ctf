@@ -32,15 +32,14 @@
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $sql="INSERT INTO models (id, year, name, type)
+            $sql="INSERT INTO models (year, name, type)
             VALUES
-            ('','$_POST[year]',$_POST[name],$_POST[type])";
-            echo "Snowboard Successfully Added!";
+            ($_POST[year]',$_POST[name],$_POST[type])";
 
             if(mysqli_query($conn, $sql)){
                 echo "Records inserted successfully.";
             } else{
-                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                echo "ERROR: Unable to execute $sql. " . mysqli_error($link);
             }
             
         }
