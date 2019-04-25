@@ -63,7 +63,7 @@
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
-              <td><input type="submit" value="Add Model"></td>
+              <td><input class="form-control" type="submit" value="Add Model"></td>
             </tr>
           </table>
         </form>
