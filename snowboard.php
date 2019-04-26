@@ -44,8 +44,8 @@
        <h3>Upload a Custom Board Design</h3>
 
       <form action="" method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" />
-        <input type="submit"/>
+        <input type="file" name="image" class="btn btn-dark">
+        <input type="submit" value="Upload" class="btn btn-dark" >
       </form>
 
     </main>
