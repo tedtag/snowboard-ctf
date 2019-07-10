@@ -19,8 +19,8 @@
       <section id="listing" style="text-align: center; margin: auto; padding: auto;">
         <?php
         $servername = "localhost:3306";
-        $username = "root_user";
-        $password = "1qazxsw2!QAZXSW@";
+        $username = "root";
+        $password = "root";
         $dbname = "snowboard-ctf";
 
         // Create connection
