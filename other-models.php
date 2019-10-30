@@ -1,3 +1,6 @@
+<?php
+   include('session.php');
+?>
 <!DOCTYPE html>
 
 <html lang="en-US">
@@ -18,11 +21,7 @@
 
       <section id="listing" style="text-align: center; margin: auto; padding: auto;">
         <?php
-        $servername = "localhost:3306";
-        $username = "root";
-        $password = "root";
-        $dbname = "snowboard-ctf";
-
+        include("config.php");
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection

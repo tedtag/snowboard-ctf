@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+   include('session.php');
+?>
 <html lang="en-US">
 
   <!-- Head -->
@@ -28,6 +30,9 @@
       </section>
 
       <?php else: ?>
+      <section id="welcome">
+        <h1> Welcome  <?php echo $_SESSION['login_user']; ?> <a href = "logout.php">Sign Out</a></h2> </h1>
+      </section>
       <section id="snowboard">
         <a href="./snowboard.php">
           <img src="./images/snowboard.png">
