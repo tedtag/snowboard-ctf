@@ -21,20 +21,20 @@
 
       <section id="listing" style="text-align: center; margin: auto; padding: auto;">
         <?php
-        include("config.php");
+        // include("config.php");
         // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
+        // $conn = new mysqli($servername, $username, $password, $dbname);
+        // // Check connection
+        // if ($conn->connect_error) {
+        //     die("Connection failed: " . $conn->connect_error);
+        // } 
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $sql="INSERT INTO models (id, year, name, type) 
             VALUES (NULL,'$_POST[year]','$_POST[name]','$_POST[type]')";
 
-            if(mysqli_query($conn, $sql)){
+            if(mysqli_query($db, $sql)){
                 echo "Records inserted successfully.";
             } else{
                 echo "ERROR: Unable to execute $sql. " . mysqli_error($link);
@@ -43,7 +43,7 @@
         }
 
         $sql = "SELECT year, name, type FROM models WHERE name = '" . $_GET['name'] . "'";
-        $result = $conn->query($sql);
+        $result = $db->query($sql);
 
         if ($result->num_rows > 0) {
             // output data of each row
@@ -58,23 +58,23 @@
         }
         if (isset($_GET['debug']) && $_GET['debug'] == 'true')
             echo "<br><b>Query:</b> " . $sql;
-        $conn->close();
+        // $conn->close();
         ?>
 
         <form action="" method="post" class="form-group">
-          <div style="background-color: rgba(0,0,0,50)">Are we missing a d.lee snowboard model? Add it to our database!</div>
+          <div style="background-color: rgba(0,0,0,50)">Are we missing a d.lee snowboard model? Add it to our database! You can only do this if you're allowed to...</div>
           <table class='table table-striped table-dark'>
             <tr>
-              <td><input class="form-control" type="text" name="year" placeholder="Snowboard year"></td>
+              <td><input class="form-control" type="text" name="year" placeholder="Snowboard year" readonly></td>
               <td><input class="form-control" type="text" name="name" value="d.lee" readonly></td>
               <td>
-                <select class="form-control" name="type">
+                <select class="form-control" name="type" readonly disabled>
                   <option value="Rocker" selected="selected">Rocker</option>
                   <option value="Camber">Camber</option>
                   <option value="Hybrid">Hybrid</option>
                 </select> 
               </td>
-              <td><input class="btn btn-primary" type="submit" value="Add Model"></td>
+              <td><input class="btn btn-primary" type="submit" value="Add Model" disabled></td>
             </tr>
           </table>
         </form>

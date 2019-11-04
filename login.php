@@ -8,7 +8,8 @@
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
+    
+
       $sql = "SELECT id FROM users WHERE email = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result);
@@ -46,7 +47,7 @@
       
    </head>
    
-   <body bgcolo = "#FFFFFF">
+   <body bgcolor = "#FFFFFF">
 	
       <div align = "center">
          <div style = "width:300px; border: solid 1px #333333; " align = "left">
