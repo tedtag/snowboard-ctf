@@ -60,7 +60,7 @@
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
-               <!-- Please remove creds test@test.com:password from db before deployment -->
+               <!-- Please remove creds test@test.com:password1234 from db before deployment -->
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
             </div>
