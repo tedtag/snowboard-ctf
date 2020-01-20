@@ -31,7 +31,7 @@
 
       <?php else: ?>
       <section id="welcome">
-        <h1> Welcome  <?php echo $_SESSION['login_user']; ?> <a href = "logout.php">Sign Out</a></h2> </h1>
+        <h1> Welcome  <?php echo $_SESSION['login_user']; //pulls logged in user email?> <a href = "logout.php">Sign Out</a></h2> </h1>
       </section>
       <section id="snowboard">
         <a href="./snowboard.php">

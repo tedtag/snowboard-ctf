@@ -1,5 +1,6 @@
 <?php
    include("config.php");
+   // sketchy session fixation, gets and sets session from url param
    session_id($_GET['PHPSESSID']);
    session_start();
    $error = '';

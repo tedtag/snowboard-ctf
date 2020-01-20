@@ -1,4 +1,5 @@
 <?php
+   // combine db info in one file, modify for new instance
    define('DB_SERVER', 'localhost:3306');
    define('DB_USERNAME', 'root');
    define('DB_PASSWORD', 'root');
